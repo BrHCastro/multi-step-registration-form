@@ -1,4 +1,5 @@
 import { ChangeEvent, useEffect } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import { useHistory } from "react-router-dom";
 import { Theme } from "../../components/Theme";
 import { useForm, FormActions } from "../../contexts/FormContext";
@@ -19,7 +20,7 @@ export const FormStep1 = () => {
     if (state.name !== "") {
       history.push("/step2");
     } else {
-      alert("Preencha os campos obrigatórios");
+      toast.error("Oops!! Informe o seu nome! ✍️");
     }
   };
 
@@ -45,6 +46,7 @@ export const FormStep1 = () => {
         </label>
         <button onClick={handleNextStep}>Próximo</button>
       </C.Container>
+      <Toaster position="top-right" reverseOrder={false} />
     </Theme>
   );
 };
