@@ -42,7 +42,12 @@ export const FormStep1 = () => {
 
         <label>
           * Seu nome completo
-          <input type="text" autoFocus onChange={handleNameChange} />
+          <input
+            type="text"
+            autoFocus
+            onChange={handleNameChange}
+            value={state.name}
+          />
         </label>
         <button onClick={handleNextStep}>Próximo</button>
       </C.Container>
