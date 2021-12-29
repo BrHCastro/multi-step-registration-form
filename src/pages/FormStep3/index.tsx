@@ -1,9 +1,12 @@
-import { ChangeEvent, useEffect } from "react";
-import toast, { Toaster } from "react-hot-toast";
-import { useHistory, Link } from "react-router-dom";
-import { Theme } from "../../components/Theme";
-import { useForm, FormActions } from "../../contexts/FormContext";
 import * as C from "./styles";
+
+import { ChangeEvent, useEffect } from "react";
+import { useForm, FormActions } from "../../contexts/FormContext";
+
+import { useHistory, Link } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
+
+import { Theme } from "../../components/Theme";
 
 export const FormStep3 = () => {
   const history = useHistory();
@@ -47,7 +50,7 @@ export const FormStep3 = () => {
     <Theme>
       <C.Container>
         <p>Passo 3/3</p>
-        <h1>Legal {state.name}, onde te achamos?</h1>
+        <h1>Legal {state.name.split(" ")[0]}, onde te achamos?</h1>
         <p>Preencha os campos abaixo para entrarmos em contato.</p>
 
         <hr />

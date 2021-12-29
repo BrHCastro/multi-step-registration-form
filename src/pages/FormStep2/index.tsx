@@ -1,6 +1,6 @@
 import * as C from "./styles";
 
-import { ChangeEvent, useEffect } from "react";
+import { useEffect } from "react";
 import { useForm, FormActions } from "../../contexts/FormContext";
 
 import { useHistory, Link } from "react-router-dom";
@@ -43,7 +43,7 @@ export const FormStep2 = () => {
     <Theme>
       <C.Container>
         <p>Passo 2/3</p>
-        <h1>{state.name}, o que melhor descreve você?</h1>
+        <h1>{state.name.split(" ")[0]}, o que melhor descreve você?</h1>
         <p>
           Escolha a opção que melhor condiz com seu estado atual,
           profissionalmente.

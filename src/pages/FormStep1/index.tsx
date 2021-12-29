@@ -1,9 +1,12 @@
-import { ChangeEvent, useEffect } from "react";
-import toast, { Toaster } from "react-hot-toast";
-import { useHistory } from "react-router-dom";
-import { Theme } from "../../components/Theme";
-import { useForm, FormActions } from "../../contexts/FormContext";
 import * as C from "./styles";
+
+import { ChangeEvent, useEffect } from "react";
+import { useForm, FormActions } from "../../contexts/FormContext";
+
+import { useHistory } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
+
+import { Theme } from "../../components/Theme";
 
 export const FormStep1 = () => {
   const history = useHistory();
