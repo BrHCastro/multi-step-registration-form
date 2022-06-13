@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import * as C from "./styles";
 
 import { ChangeEvent, useEffect } from "react";
